@@ -159,7 +159,7 @@ class MainActivity : ComponentActivity() {
                                 }
                             }
 
-                            // always scroll to last message
+                            // As a new message arrives, scroll to it
                             LaunchedEffect(uiState.value) {
                                 scrollState.scrollTo(scrollState.maxValue)
                             }
@@ -191,6 +191,10 @@ class MainActivity : ComponentActivity() {
                             ) {
                                 Text(text = "Send", maxLines = 1)
                             }
+                        }
+                        // As a new message arrives, clear text
+                        LaunchedEffect(uiState.value) {
+                            sendText = ""
                         }
                     }
                 }
