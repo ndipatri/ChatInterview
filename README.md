@@ -38,3 +38,6 @@ data class SendConfirmation(val id: UUID, val result: Result) {
 }
 ```
 
+
+![chatInterview](https://github.com/user-attachments/assets/dc63fb25-ef8c-4fd0-951d-9e0365fd5581)
+
